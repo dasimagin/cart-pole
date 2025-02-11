@@ -1,0 +1,24 @@
+site_name: Cart Pole
+repo_name: dasimagin/cart-pole
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+  - pymdownx.arithmatex:
+      generic: true
+
+theme:
+  name: material
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  palette:
+    primary: deep orange
+    accent: amber
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML
