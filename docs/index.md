@@ -1,8 +1,12 @@
 # Overview
 
-CartPole is research project, which is designed to learn the basics of optimal control and reinforcement learning
-The environment is a variation of famous control problem, where a pole is attached by a joint to a cart, moving along a axis.
-Some motor drives the cart with acceleration as control input.
-The goal is to swing up the pole and maintain it in unstable equilibrium state.
+CartPole is a personal research project aimed at learning modern reinforcement learning methods applicable to robotics.
+The environment is a variation of the classic control problem, where a pole is attached by a joint to a cart that moves along a single axis.
+A motor drives the cart, with acceleration serving as the control input.
+The objective is to swing up the pole and keep it balanced in the unstable upright position.
+
+In addition to the main goal, the project also addresses several secondary objectives:
+- Exploring the JAX framework and its ecosystem
+- Building a fully functional device from scratch
 
 ![CartPole](svg/cart_pole.svg)
