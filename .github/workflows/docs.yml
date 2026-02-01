@@ -17,21 +17,17 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'  # e.g. '3.9'
+      - name: Setup Bazel
+        uses: bazelbuild/setup-bazelisk@v3
 
-      - name: Install dependencies
+      - name: Build Site
         run: |
-          pip install -r requirements.txt
-
-      - name: Build MkDocs site
-        run: |
-          mkdocs build --verbose --clean
+          bazel build //docs:site
+          mkdir site
+          tar -xf .bazel-bin/docs/site.tar -C site
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          publish_dir: site

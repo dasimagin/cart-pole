@@ -15,16 +15,16 @@ cc_binary(
 )
 
 platform_transition_filegroup(
-    name = "firmware_rp2350",
+    name = "rp2350",
     srcs = [":firmware.elf"],
     target_platform = "@pico-sdk//bazel/platform:rp2350",
 )
 
 genrule(
-    name = "firmware.uf2",
-    srcs = [":firmware_rp2350"],
+    name = "uf2",
+    srcs = [":rp2350"],
     outs = ["firmware.uf2"],
-    cmd = "$(location @picotool//:picotool) uf2 convert $(location :firmware_rp2350) $@",
+    cmd = "$(location @picotool//:picotool) uf2 convert $(location :rp2350) $@",
     tools = ["@picotool"],
 )
 
@@ -33,10 +33,10 @@ sh_binary(
     srcs = ["flash.sh"],
     args = [
         "$(rootpath @picotool//:picotool)",
-        "$(rootpath //firmware:firmware.uf2)",
+        "$(rootpath //firmware:uf2)",
     ],
     data = [
-        "//firmware:firmware.uf2",
+        "//firmware:uf2",
         "@picotool",
     ],
 )

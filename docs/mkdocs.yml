@@ -1,5 +1,6 @@
 site_name: Cart Pole
 repo_name: dasimagin/cart-pole
+docs_dir: src
 
 markdown_extensions:
   - admonition
@@ -14,8 +15,8 @@ markdown_extensions:
 theme:
   name: material
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+    text: "Roboto"
+    code: "Roboto Mono"
   palette:
     primary: deep orange
     accent: amber

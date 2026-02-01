@@ -9,8 +9,28 @@ bazel_dep(name = "rules_cc", version = "0.2.16")
 bazel_dep(name = "aspect_bazel_lib", version = "2.22.5")
 bazel_dep(name = "pico-sdk", version = "2.2.2-develop.bcr.20260105-1cc19a21")
 bazel_dep(name = "picotool", version = "2.2.0")
+bazel_dep(name = "rules_python", version = "1.8.3")
 
 register_toolchains(
     "@pico-sdk//bazel/toolchain:linux-x86_64-rp2350",
     "@pico-sdk//bazel/toolchain:mac-aarch64-rp2350",
 )
+
+python = use_extension(
+    "@rules_python//python/extensions:python.bzl",
+    "python",
+)
+python.toolchain(
+    python_version = "3.12",
+)
+
+pip = use_extension(
+    "@rules_python//python/extensions:pip.bzl",
+    "pip",
+)
+pip.parse(
+    hub_name = "py_doc_deps",
+    python_version = "3.12",
+    requirements_lock = "//requirements:docs.lock.txt",
+)
+use_repo(pip, "py_doc_deps")
