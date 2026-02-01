@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="..">
       
-        <link rel="next" href="firmware/">
+      
+        <link rel="next" href="../model/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.6.0">
     
     
       
-        <title>Cart Pole</title>
+        <title>Firmware - Cart Pole</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a40c8224.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#firmware" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Cart Pole" class="md-header__button md-logo" aria-label="Cart Pole" data-md-component="logo">
+    <a href=".." title="Cart Pole" class="md-header__button md-logo" aria-label="Cart Pole" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Firmware
             
           </span>
         </div>
@@ -179,7 +181,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Cart Pole" class="md-nav__button md-logo" aria-label="Cart Pole" data-md-component="logo">
+    <a href=".." title="Cart Pole" class="md-nav__button md-logo" aria-label="Cart Pole" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -189,6 +191,27 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
       
       
@@ -206,29 +229,7 @@
         
       
       
-      <a href="." class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="firmware/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -238,6 +239,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -249,7 +251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="model/" class="md-nav__link">
+      <a href="../model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -297,19 +299,13 @@
 
 
 
-<h1 id="overview">Overview</h1>
-<p>CartPole is a personal research project aimed at learning modern RL applicable to robotics.
-The environment is a variation of the classic control problem, where a pole is attached by a joint to a cart that moves along a single axis.
-A motor drives the cart, with acceleration serving as the control input.
-The objective is to swing up the pole and keep it balanced in the unstable upright position.</p>
-<p><img alt="CartPole" src="svg/cart_pole.svg" /></p>
-<p>Some of the key technology and design choices behind this project:</p>
-<ol>
-<li><strong>[Bazel]</strong> Unified build and dependency system.</li>
-<li><strong>[MkDocs]</strong> Ccomprehensive docs with extensive use of <code>LaTeX</code>.</li>
-<li><strong>[Pico2]</strong> Simple microcontroller with a C++ SDK.</li>
-<li><strong>[JAX]</strong> Modern and efficient pure RL control</li>
-</ol>
+<h1 id="firmware">Firmware</h1>
+<p>To flash the microcontroller, hold down <code>BOOTSEL</code> and connect the device via USB. Then run:</p>
+<div class="highlight"><pre><span></span><code>bazel<span class="w"> </span>run<span class="w"> </span>//firmware:flash
+</code></pre></div>
+<p>If you only want to verify that the project builds successfully:</p>
+<div class="highlight"><pre><span></span><code>bazel<span class="w"> </span>build<span class="w"> </span>//firmware:elf
+</code></pre></div>
 
 
 
@@ -356,10 +352,10 @@ The objective is to swing up the pole and keep it balanced in the unstable uprig
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.5090c770.min.js"></script>
+      <script src="../assets/javascripts/bundle.5090c770.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
