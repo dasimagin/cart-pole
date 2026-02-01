@@ -1,0 +1,12 @@
+{
+  "bazel.executable": "bazelisk",
+  "bazel.enableCodeLens": true,
+  "[bazel]": {
+    "editor.defaultFormatter": "BazelBuild.vscode-bazel",
+    "editor.formatOnSave": true
+  },
+  "[bzl]": {
+    "editor.defaultFormatter": "BazelBuild.vscode-bazel",
+    "editor.formatOnSave": true
+  }
+}
